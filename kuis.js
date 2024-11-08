@@ -11,7 +11,7 @@ const fileName = process.argv[3];
 
 
 
-let data = JSON.parse(fs.readFileSync(fileName, "utf8"))
+let data = []//JSON.parse(fs.readFileSync(fileName, "utf8"))
 let index = 0;
 let skipped = [];
  let countMistakes = 0;
@@ -55,6 +55,7 @@ const jawaban = (answer) => {
 }
 
 if (fileName) {
+    data = JSON.parse(fs.readFileSync(fileName, "utf8"))
 
   console.log(
     "Selamat datang di permainan Tebak Kata, silahkan isi dengan jawaban dengan benar ya!"
